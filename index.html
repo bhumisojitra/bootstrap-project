@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- favicon -->
+        <link rel="shortcut icon" href="assets/img/logo/amity-logo.svg.jpg" type="image/x-icon">
+        <title>Political</title>
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <!-- font -->
+        <link rel="stylesheet" href="assets/css/font.css">
+        <!-- fontawesome -->
+        <link rel="stylesheet" href="assets/css/all.min.css">
+        <!-- carousel -->
+        <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+        <!-- aos -->
+        <link rel="stylesheet" href="assets/css/aos.css">
+        <!-- css -->
+        <link rel="stylesheet" href="assets/css/style.css">
+        <!-- boot-icon -->
+        <link rel="stylesheet" href="assets/css/bootstrap-icons.min.css">
+        <style>
+        .owl-nav{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+        .owl-nav button{
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background-color: white !important;
+            margin-left: -70px;
+            transition: all 0.3s ease;
+        }
+        .owl-nav button:hover{
+           background-color: #2952CC !important;
+        }
+        .owl-nav button.owl-next{
+            margin-right: -50px;
+        }
+        .owl-prev span, .owl-next span{
+          font-size: 30px;
+        }
+        .owl-dots{
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);  
+        }
+        .owl-carousel button.owl-dot{
+            width: 10px;
+            height: 10px;
+            border-radius: 50px;
+            background-color: #D3D5DF;
+            margin-left: 5px;
+        }
+        button.owl-dot.active{
+            background-color: #2952CC;
+        }
+        </style>
+    </head>
+    <body class="hidden">
+      <!-- pointer -->
+      <div id="cursor"></div>
+      <div id="cursor-border"></div>
+      <!-- loader -->
+      <section class="wrapper">
+            <div class="loader">
+                <div class="loading one"></div>
+                <div class="loading two"></div>
+                <div class="loading three"></div>
+                <div class="loading four"></div>
+            </div>
+      </section>
+      <!-- back to top -->
+      <div class="progress-wrap">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+      </div>
+        <!-- header -->
+        <header class="head">
+            <nav class="navbar navbar-expand-lg bg-white p-3">
+                <div class="container">
+                    <img src="assets/img/logo/amity-logo.svg" alt="logo">
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto">
+                      <li class="nav-item">
+                        <a class="nav-link fw-medium ms-3 " aria-current="page" href="#">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link fw-medium ms-3 " href="assets/pages/about.html">About</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link fw-medium ms-3 " href="assets/pages/agenda.html">Agenda</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link fw-medium ms-3 " href="assets/pages/donate.html">Donate</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link fw-medium ms-3 " href="assets/pages/faq.html">FAQ</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link fw-medium ms-3 " href="assets/pages/blog.html">News</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link fw-medium ms-3 " href="assets/pages/contect.html">Contact</a>
+                      </li>
+                    </ul>
+                    <button class="btn btn-outline-success py-2 px-3" type="submit">
+                        <a href="#" class="hover text-decoration-none fw-medium">Get involved</a>
+                    </button>
+                    <button class="btn btn-primary py-2 px-3 ms-3" type="submit" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                        <a href="#" class="hover2 text-white text-decoration-none fw-medium">Get in touch</a>
+                    </button>
+                  </div>
+                </div>
+            </nav>
+            <div class="w-25 offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+              <div class="offcanvas-header">
+                <h4 class="offcanvas-title pt-4 px-4 pb-0 fs-2 fw-bold text-primary" id="offcanvasExampleLabel"> Let's get in touch</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body pt-0">
+                <div class="pb-2">
+                  <p class="px-4 text-secondary fw-medium ">
+                    Give us a call or fill in the form below and we will contact you. We endeavor to answer all inquiries within 24 hours on business days.
+                  </p>
+                </div>
+                <hr>
+                <form action="" method="" class="m-3">
+                  <input type="text" name="fname" placeholder="Name" class="mt-2 w-100 border px-4 py-3 rounded-3" style="background-color: #F8F7FD; border-color: #E6E8F0;">
+                  <input type="email" name="email" placeholder="Email address" class="mt-4 w-100 border px-4 py-3 rounded-3" style="background-color: #F8F7FD; border-color: #E6E8F0;">
+                  <textarea name="msg" rows="4" cols="50" placeholder="Message" class="mt-4 w-100 border px-4 py-3 rounded-3" style="background-color: #F8F7FD; border-color: #E6E8F0;"></textarea>
+                  <button class="btn btn-primary mt-3 px-4 py-3 w-75 w-100 rounded-3" type="submit">
+                    <a href="#" class="hover2 text-white text-decoration-none fw-medium">Submit</a>
+                  </button>
+                </form>
+              </div>
+            </div>
+        </header>
+        <main>
+            <!-- banner -->
+            <section>
+              <div class="banner position-relative">
+                <img src="assets/img/banner/home.jpg" alt="banner-img" class="w-100 img-fluid">
+                <div class="overlay position-absolute top-0 bottom-0 start-0 end-0" style="background-color: rgba(0, 0, 0, .3);"></div>
+                <div class="container container-fluid">
+                    <div class="row position-absolute" style="top: 20%;">
+                        <div class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+                            <div class="title">
+                                <h1 class="text-white fw-semibold mb-3" style="font-size: 60px;">Advocates for charity and political progress</h1>
+                                <p class="text-white fw-medium" style="font-size: 18px;">Join us in fostering a better future by supporting causes and engaging<br> in meaningful political initiatives through our platform.</p>
+                            </div>
+                            <form action="" method="">
+                              <div class="d-flex mt-4">
+                                <input type="email" name="email" placeholder="Email" class="border-1 border-primary px-4 py-3 w-50 rounded-start">
+                                <button class="btn btn-primary py-0 px-4 border-1 rounded-0 rounded-end" type="submit">
+                                    <a href="#" class="hover2 text-white text-decoration-none fw-medium">Subscribe</a>
+                                </button>
+                              </div>
+                            </form>
+                            <p class="mt-4 fw-semibold text-white opacity-75 text-uppercase" style="font-size: 14px;">Sign up for our most-needed positions</p>
+                            <div id="list-example" class="list-group" style="width: 45px; height: 10px; margin-top: 130px;">
+                              <a href="#list-item-1" class="list-group-item list-group-item-action rounded-circle border-0 bg-primary" style="padding: 10px 14px;">
+                                <i class="bi bi-arrow-down" style="color: white; font-weight: 700;"></i>
+                              </a>
+                            </div>
+                        </div>
+                        <div class="d-none d-xs-none d-sm-none d-md-none col-lg-5 d-lg-bolck col-xl-5 d-xl-bolck col-xxl-5 d-xxl-block ">
+                          <div class="detail d-flex justify-content-end flex-column mt-3 me-5 pe-5">
+                            <a class="detail1 text-end detail1">
+                                <i class="bi bi-telephone-fill" style="color: white;"></i>
+                              <div>
+                                <h5 class="text-white fs-6 fw-semibold mt-3 mb-1"> Main phone number</h5>
+                                <p class="text-th fw-medium">1-800-242-7489</p>
+                              </div>
+                            </a>
+                            <a class="detail1 text-end mt-2 detail1">
+                              <i class="bi bi-suit-heart-fill" style="color: white;"></i>
+                              <div>
+                                <h5 class="text-white fs-6 fw-semibold mt-3 mb-1"> Donations related</h5>
+                                <p class="text-th fw-medium">support@amity.org</p>
+                              </div>
+                            </a>
+                            <a class="detail1 text-end mt-2 detail1">
+                              <i class="bi bi-flag-fill" style="color: white;"></i>
+                              <div>
+                                <h5 class="text-white fs-6 fw-semibold mt-3 mb-1"> Our locations</h5>
+                                <p class="text-th fw-medium">View the map</p>
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </section>   
+            <!-- about -->
+            <section class="py-100">
+              <div class="container">
+                <div class="row">
+                  <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
+                    <h6 id="list-item-1" style="font-size: 18px; text-align: center; font-weight: 500; color: #2952CC;" data-aos="fade-up"> Learn about us</h6>
+                    <h2 class="text-primary display-5 fw-semibold text-center mt-4" data-aos="fade-up">Sustainable initiatives and <br> economic advancement</h2>
+                  </div>
+                  <div class="pt-50 d-flex align-items-start gap-4">
+                    <ul class="col-4 nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                      <li class="nav-link active m-0 border border-primary rounded-3" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true" style="padding: 32px;">
+                        <h4 class="fw-medium">01. Who we are</h4>
+                        <p class="m-0 mt-2">Our vision is built on inclusivity, transparency, and sustainable growth.</p>
+                      </li>
+                      <li class="nav-link border border-primary mt-4 rounded-3" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false" style="padding: 32px;">
+                        <h4 class="fw-medium">02. Our history</h4>
+                        <p class="m-0 mt-2">Delve into our history of pioneering policies and impactful actions.</p>
+                      </li>
+                      <li class="nav-link border border-primary mt-4 rounded-3" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false" style="padding: 32px;">
+                        <h4 class="fw-medium">03. Our projects</h4>
+                        <p class="m-0 mt-2">We believe in the power of collective action to address challenges.</p>
+                      </li>
+                    </ul>
+                    <div class="col-8 tab-content border border-primary rounded-3" id="v-pills-tabContent">
+                      <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab" tabindex="0">
+                      <div class="d-flex justify-content-between" style="padding: 39px 35px;">
+                            <div class="col-7 my-5">
+                              <h6 class="text-th mb-3" style="font-size: 18px;"> Our collective vision</h6>
+                              <h3 class="fs-2 text-primary fw-semibold mb-3">In synchrony with social <br> and political flourish</h3>
+                              <p class="text-secondary">Our vision is rooted in the belief that a <br> harmonious coexistence between ecological <br> sustainability and economic prosperity is the <br> key to building a prosperous future.</p>
+                              <button class="btn btn-primary mt-4 rounded-3" type="submit" style="padding: 17px 35px;">
+                                <a href="assets/pages/about.html" class="hover2 text-white text-decoration-none fw-medium"> More about us </a>
+                              </button>
+                            </div>
+                            <div class="col-5">
+                              <img src="assets/img/about/tab-1.jpg" class="text-end rounded-3 img-fluid">
+                            </div>
+                      </div>
+                      </div>
+                      <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab" tabindex="0">
+                        <div class="d-flex justify-content-between" style="padding: 39px 35px;">
+                          <div class="col-7 my-5">
+                            <h6 class="text-th mb-3" style="font-size: 18px;"> Our journey in politics</h6>
+                            <h3 class="fs-2 text-primary fw-semibold mb-3">Pioneering change since inception</h3>
+                            <p class="text-secondary">Delve into our rich history of pioneering <br> policies that have shaped our nation positively. <br> From humble beginnings, discover our journey <br> towards a better tomorrow.</p>
+                            <button class="btn btn-primary mt-4 rounded-3" type="submit" style="padding: 17px 35px;">
+                              <a href="#" class="hover2 text-white text-decoration-none fw-medium"> See all causes </a>
+                            </button>
+                          </div>
+                          <div class="col-5">
+                            <img src="assets/img/about/tab-2.jpg" class="text-end rounded-3 img-fluid">
+                          </div>
+                      </div>
+                      </div>
+                      <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab" tabindex="0">
+                        <div class="d-flex justify-content-between" style="padding: 39px 35px;">
+                          <div class="col-7 my-5">
+                            <h6 class="text-th mb-3" style="font-size: 18px;"> Driving positive change</h6>
+                            <h3 class="fs-2 text-primary fw-semibold mb-3">Innovative initiatives for a better society</h3>
+                            <p class="text-secondary">Explore our diverse range of projects aimed at <br> tackling societal challenges. From sustainability <br> to social welfare, we are dedicated to creating <br> tangible, positive impacts in our communities.</p>
+                            <button class="btn btn-primary mt-4 rounded-3" type="submit" style="padding: 17px 35px;">
+                              <a href="#" class="hover2 text-white text-decoration-none fw-medium"> See the plan </a>
+                            </button>
+                          </div>
+                          <div class="col-5">
+                            <img src="assets/img/about/amity-political-tab-3.jpg" class="text-end rounded-3 img-fluid">
+                          </div>
+                      </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- counter -->
+            <section class="counter position-relative">
+              <div class="overlay position-absolute top-0 bottom-0 start-0 end-0" style="background-color: rgba(16, 24, 64, .7);"></div>
+              <div class="container py-150">
+                <div class="row position-absolute">
+                  <ul class="d-flex justify-content-center align-items-center coun">
+                    <li class="text-center border-end border-secondary" style="padding-left: 90px; padding-right: 90px;">
+                      <img src="assets/img/counter/wallet.png" data-aos="fade-up" width="60px" height="60px">
+                      <h2 class="text-white fw-semibold display-5 mt-3" data-aos="fade-up">
+                        <span>$</span>
+                        <span class="count percent" data-count="25">0</span>
+                        <span>M</span>
+                      </h2>
+                      <h3 class="fs-5 text-white mt-2" data-aos="fade-up">Donations</h3>
+                    </li>
+                    <li class="text-center border-end border-secondary" style="padding-left: 90px; padding-right: 90px;">
+                      <img src="assets/img/counter/heart.png" width="60px" height="60px" data-aos="fade-up">
+                      <h2 class="text-white fw-semibold display-5 mt-3" data-aos="fade-up">
+                        <span class="count percent" data-count="20">0</span>
+                        <span>+</span>
+                      </h2>
+                      <h3 class="fs-5 text-white mt-2" data-aos="fade-up">Charitable causes</h3>
+                    </li>
+                    <li class="text-center border-end border-secondary" style="padding-left: 90px; padding-right: 90px;">
+                      <img src="assets/img/counter/clock.png" width="60px" height="60px" data-aos="fade-up">
+                      <h2 class="text-white fw-semibold display-5 mt-3" data-aos="fade-up">
+                        <span class="count percent" data-count="50">0</span>
+                        <span>K</span>
+                      </h2>
+                      <h3 class="fs-5 text-white mt-2" data-aos="fade-up">Volunteer hours</h3>
+                    </li>
+                    <li class="text-center" style="padding-left: 90px; padding-right: 90px;">
+                      <img src="assets/img/counter/avatar.png" width="60px" height="60px" data-aos="fade-up">
+                      <h2 class="text-white fw-semibold display-5 mt-3" data-aos="fade-up">
+                        <span class="count percent" data-count="10">0</span>
+                        <span>+</span>
+                      </h2>
+                      <h3 class="fs-5 text-white mt-2" data-aos="fade-up">Policy changes</h3>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+            <!-- social change -->
+            <section class="py-100 bg-light">
+              <div class="container">
+                <div class="row">
+                    <h6 id="list-item-1" style="font-size: 18px; text-align: center; font-weight: 500; color: #2952CC;" data-aos="fade-up"> Explore our offerings</h6>
+                    <h2 class="text-primary display-5 fw-semibold text-center mt-4" data-aos="fade-up">Engage with impactful <br>  programs and inspiring events</h2>
+                  <div class="col-5 ps-5" style="margin-top: 200px;">
+                    <h3 class="text-primary fs-2 fw-semibold mb-3">Innovative approaches for meaningful political and <br> social change</h3>
+                    <p class="text-secondary">Our commitment reflects our dedication to driving <br> impactful transformations. Join us as we pioneer <br> progressive solutions, empower communities, and <br> shape a better future.</p>
+                    <button class="btn btn-primary mt-4 rounded-3" type="submit" style="padding: 17px 35px;" data-aos="zoom-in-up">
+                      <a href="assets/pages/about.html" class="hover2 text-white text-decoration-none fw-medium"> About our party </a>
+                    </button>
+                  </div>
+                  <div class="col-7 pt-50 d-flex" style="gap: 33px;">
+                    <div class="col-6 mt-5 position-relative">
+                      <img src="assets/img/social/shape-1-1.svg" class="position-absolute bounce" style="bottom: -6px; left: -33px;">
+                      <div class="item1 col-12 bg-white rounded-3" style="cursor: pointer;">
+                        <div class="item text-center rounded-3">
+                          <img src="assets/img/social/interpersonal-skills.png" width="38px" height="38px">
+                        </div>
+                        <h5 class="fs-5 fw-semibold">Community Outreach</h5>
+                        <p class="text-secondary m-0">Our events foster community dialogue, civic engagement, and awareness on social and political issues shaping our future.</p>
+                      </div>
+                      <div class="item2 col-12 bg-white rounded-3" style="cursor: pointer;">
+                        <div class="item text-center rounded-3">
+                          <img src="assets/img/social/bitcoin-wallet.png" width="38px" height="38px">
+                        </div>
+                        <h5 class="fs-5 fw-semibold"> Fundraising Galas</h5>
+                        <p class="text-secondary m-0">Attend our galas to support charitable causes, network with like-minded individuals, and celebrate philanthropic achievements.</p>
+                      </div>
+                    </div>
+                    <div class="col-6 position-relative">
+                      <img src="assets/img/social/shape-2.svg" class="position-absolute" style="top: -32px; right: -32px;">
+                      <div class="item3 col-12 bg-white rounded-3" style="cursor: pointer;">
+                        <div class="item text-center rounded-3">
+                          <img src="assets/img/social/book.png" width="38px" height="38px">
+                        </div>
+                        <h5 class="fs-5 fw-semibold"> Educational Workshops</h5>
+                        <p class="text-secondary m-0">Join our workshops to learn about advocacy, policy-making, and <br> grassroots initiatives for positive societal impact.</p>
+                      </div>
+                      <div class="item4 col-12 bg-white rounded-3" style="cursor: pointer;">
+                        <div class="item text-center rounded-3">
+                          <img src="assets/img/social/flag.png" width="38px" height="38px">
+                        </div>
+                        <h5 class="fs-5 fw-semibold"> Political Campaigns</h5>
+                        <p class="text-secondary m-0">Participate in our political campaigns advocating for transparency, accountability, and progressive policies at local and national levels.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- help -->
+            <section class="py-100">
+              <div class="container">
+                <div class="row">
+                    <h6 id="list-item-1" style="font-size: 18px; text-align: center; font-weight: 500; color: #2952CC;" data-aos="fade-up"> Help us and donate today</h6>
+                    <h2 class="text-primary display-5 fw-semibold text-center mt-4" data-aos="fade-up">The special projects to share <br> our mission and bring help</h2>
+                  <div class="pt-50 d-flex m-0">
+                    <div class="card col-4 rounded-3 position-relative" style="cursor: pointer;">
+                      <img src="assets/img/social/shape-1-1.svg" class="position-absolute bounce" style="bottom: -30px; left: -33px; z-index: -1;">
+                      <img class="card-img-top" src="assets/img/help/home-political-donation-1.jpg">
+                      <div class="card-body" style="padding: 33px;">
+                        <h3 class="fw-semibold" style="margin-bottom: 10px;">Support campaigns for positive change</h3>
+                        <p class="card-text text-secondary">Together, we can make a meaningful impact and transform lives for the better.</p>
+                      </div>
+                      <hr class="m-0 p-0">
+                      <div class="card-body" style="padding: 33px;">
+                        <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 12px;">
+                          <div class="progress-bar" style="width: 45%"></div>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                          <div>
+                            <h4 class="text-primary fw-semibold mt-3" style="font-size: 20px;">$4,500</h4>
+                            <p class="m-0 text-secondary">of $10,000</p>
+                          </div>
+                          <div class="text-end">
+                            <h4 class="text-primary fw-semibold mt-3" style="font-size: 20px;"> 2 </h4>
+                            <p class="m-0 text-secondary"> donations </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card col-4 rounded-3" style="margin-left: 33px; cursor: pointer;">
+                      <img class="card-img-top" src="assets/img/help/home-political-donation-2.jpg">
+                      <div class="card-body" style="padding: 33px;">
+                        <h3 class="fw-semibold" style="margin-bottom: 10px;">Donate to support policy reform efforts</h3>
+                        <p class="card-text text-secondary">Every contribution counts towards building a better world for everyone to live in.</p>
+                      </div>
+                      <hr class="m-0 p-0">
+                      <div class="card-body" style="padding: 33px;">
+                        <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 12px;">
+                          <div class="progress-bar" style="width: 40%"></div>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                          <div>
+                            <h4 class="text-primary fw-semibold mt-3" style="font-size: 20px;">$4,000</h4>
+                            <p class="m-0 text-secondary">of $10,000</p>
+                          </div>
+                          <div class="text-end">
+                            <h4 class="text-primary fw-semibold mt-3" style="font-size: 20px;"> 2 </h4>
+                            <p class="m-0 text-secondary"> donations </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card col-4 rounded-3" style="margin-left: 33px; cursor: pointer;">
+                      <img class="card-img-top" src="assets/img/help/home-political-donation-3.jpg">
+                      <div class="card-body" style="padding: 33px;">
+                        <h3 class="fw-semibold" style="margin-bottom: 10px;">Serve and support the community</h3>
+                        <p class="card-text text-secondary">Join us in our mission to create a brighter future for generations to come.</p>
+                      </div>
+                      <hr class="m-0 p-0">
+                      <div class="card-body" style="padding: 33px;">
+                        <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 12px;">
+                          <div class="progress-bar" style="width: 25%"></div>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                          <div>
+                            <h4 class="text-primary fw-semibold mt-3" style="font-size: 20px;">$2,500</h4>
+                            <p class="m-0 text-secondary">of $10,000</p>
+                          </div>
+                          <div class="text-end">
+                            <h4 class="text-primary fw-semibold mt-3" style="font-size: 20px;"> 1 </h4>
+                            <p class="m-0 text-secondary"> donations </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn btn-primary mt-5 rounded mx-auto" type="submit" style="padding: 17px 0px; width: 213px;" data-aos="zoom-in-up">
+                    <a href="assets/pages/donate.html" class="hover2 text-white text-decoration-none fw-medium"> View all campaigns </a>
+                  </button>
+                </div> 
+              </div>
+            </section> 
+            <!-- Support -->
+            <section class="support position-relative">
+              <div class="overlay position-absolute top-0 bottom-0 start-0 end-0" style="background-color: rgba(16, 24, 64, .7);"></div>
+              <div class="container py-150 mx-auto text-center">
+                <div class="title position-absolute" style="left: 50%; transform: translateX(-50%);">
+                  <h6 class="text-center text-center mb-3" style="font-size: 18px; color: #FFFFFFD9;" data-aos="fade-up">Support our causes</h6>
+                  <h2 class="fw-bold text-white display-5" data-aos="fade-up">Join a global movement, working <br> together to end the injustice</h2>
+                  <button class="btn btn-secondary mt-5 rounded-3" type="submit" style="padding: 17px 35px;" data-aos="zoom-in-up">
+                    <a href="assets/pages/donate.html" class="text-decoration-none fw-medium"> Make a donation </a>
+                  </button>
+                  <button class="btn btn-outline mt-5 rounded-3 ms-2" type="submit" style="padding: 17px 35px;" data-aos="zoom-in-up">
+                    <a href="#" class="text-decoration-none fw-medium">
+                      <i class="bi bi-caret-right-square-fill"></i>
+                      Get involved
+                    </a>
+                  </button>
+                </div>
+              </div>
+            </section>
+            <!-- political -->
+            <section class="py-100">
+              <div class="container">
+                <div class="row">
+                  <div class="col-6 mt-5">
+                    <h2 class="fw-semibold text-primary display-5" style="margin-bottom: 12px;">Join our political party</h2>
+                    <p class="text-secondary" style="font-size: 18px;">Being a member of our party means participating in <br> shaping the future and contributing to positive change.</p>
+                    <form action="" method="" class="mt-4">
+                      <input type="text" name="fname" placeholder="Enter Your name" class="mt-2 w-75 border px-4 py-3 rounded-3" style="background-color: #F8F7FD; border-color: #E6E8F0;">
+                      <input type="email" name="email" placeholder="Enter Your email" class="mt-4 w-75 border px-4 py-3 rounded-3" style="background-color: #F8F7FD; border-color: #E6E8F0;">
+                      <button class="btn btn-primary mt-4 px-4 py-3 w-25 rounded-3" type="submit" data-aos="zoom-in-up">
+                        <a href="#" class="hover2 text-white text-decoration-none fw-medium">Apply Now</a>
+                      </button>
+                    </form>
+                    <p class="text-uppercase fw-medium mt-4" style="color: #C1C4D6; font-size: 14px;" data-aos="zoom-in-up">Sign Up for Our Most-Needed Positions</p>
+                  </div>
+                  <div class="col-6 position-relative">
+                    <img src="assets/img/political/amity-political-img-1.jpg" class=" img-fluid">
+                    <img src="assets/img/social/shape-1-1.svg" class="position-absolute bounce" style="bottom: -30px; left: -33px; z-index: -1;">
+                    <img src="assets/img/social/shape-2.svg" class="position-absolute" style="top: -32px; right: 10px; z-index: -1;">
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- commitment -->
+            <section class="py-100 bg-light">
+              <div class="container">
+                <div class="row">
+                  <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
+                    <h6 id="list-item-1" style="font-size: 18px; text-align: center; font-weight: 500; color: #2952CC;" data-aos="fade-up">Our commitment</h6>
+                    <h2 class="text-primary display-5 fw-semibold text-center mt-4" data-aos="fade-up">Commitments upholding <br> our vision for progress</h2>
+                  </div>
+                  <div class="col-3 pt-50">
+                    <div class="group text-center">
+                      <p class="text-uppercase text-secondary mb-4 fw-medium" style="font-size: 14px;">January 2024</p>
+                      <div class="hello position-relative">
+                        <hr>
+                        <h3 class="text-primary fw-bold mt-4" style="font-size: 20px;">Transparency Day</h3>
+                        <div class="dott position-absolute" data-bs-toggle="tooltip" data-bs-placement="bottom"></div>
+                        <div class="item11 bg-white rounded-3">
+                          <div class="square"></div>
+                          <div class="item text-center rounded-3">
+                            <img src="assets/img/social/flag.png" width="38px" height="38px">
+                          </div>
+                          <h5 class="fs-5 fw-semibold" style="text-align: start;">Transparency Day</h5>
+                          <p class="text-secondary m-0" style="text-align: start;">We share financial reports and <br> project updates to uphold <br> transparency and <br> accountability.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3 pt-50">
+                    <div class="group text-center">
+                      <p class="text-uppercase text-secondary mb-4 fw-medium" style="font-size: 14px;">MARCH 2024</p>
+                      <div class="hello position-relative active">
+                        <hr>
+                        <h3 class="text-primary fw-bold mt-4" style="font-size: 20px;">Community Day</h3>
+                        <div class="dott position-absolute" data-bs-toggle="tooltip" data-bs-placement="bottom"></div>
+                        <div class="item11 bg-white rounded-3 active">
+                          <div class="square"></div>
+                          <div class="item text-center rounded-3">
+                            <img src="assets/img/social/flag.png" width="38px" height="38px">
+                          </div>
+                          <h5 class="fs-5 fw-semibold" style="text-align: start;">Community Day</h5>
+                          <p class="text-secondary m-0" style="text-align: start;">Engage with local communities <br> through volunteer drives, <br> workshops, and collaborative <br> projects.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3 pt-50">
+                    <div class="group text-center">
+                      <p class="text-uppercase text-secondary mb-4 fw-medium" style="font-size: 14px;">JUNE 2024</p>
+                      <div class="hello position-relative">
+                        <hr>
+                        <h3 class="text-primary fw-bold mt-4" style="font-size: 20px;">Advocacy Summit</h3>
+                        <div class="dott position-absolute" data-bs-toggle="tooltip" data-bs-placement="bottom"></div>
+                        <div class="item11 bg-white rounded-3">
+                          <div class="square"></div>
+                          <div class="item text-center rounded-3">
+                            <img src="assets/img/social/flag.png" width="38px" height="38px">
+                          </div>
+                          <h5 class="fs-5 fw-semibold" style="text-align: start;">Advocacy Summit</h5>
+                          <p class="text-secondary m-0" style="text-align: start;">Join policymakers, activists, and <br> experts to discuss pressing <br> social issues and advocate for <br> legislative change.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3 pt-50">
+                    <div class="group text-center">
+                      <p class="text-uppercase text-secondary mb-4 fw-medium" style="font-size: 14px;">SEPTEMBER 2024</p>
+                      <div class="hello position-relative">
+                        <hr>
+                        <h3 class="text-primary fw-bold mt-4" style="font-size: 20px;">Report Release</h3>
+                        <div class="dott position-absolute" data-bs-toggle="tooltip" data-bs-placement="bottom"></div>
+                        <div class="item11 bg-white rounded-3">
+                          <div class="square"></div>
+                          <div class="item text-center rounded-3">
+                            <img src="assets/img/social/flag.png" width="38px" height="38px">
+                          </div>
+                          <h5 class="fs-5 fw-semibold" style="text-align: start;">Report Release</h5>
+                          <p class="text-secondary m-0" style="text-align: start;">We showcase the impact of our <br> initiatives, highlighting success <br> stories and lessons learned for <br> continuous improvement.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- FAQ -->
+            <section class="py-100">
+              <div class="container">
+                <div class="row">
+                  <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
+                    <h6 id="list-item-1" style="font-size: 18px; text-align: center; font-weight: 500; color: #2952CC;" data-aos="fade-up">Got any questions?</h6>
+                    <h2 class="text-primary display-5 fw-semibold text-center mt-4" data-aos="fade-up">Find answers to your <br> common questions here</h2>
+                  </div>
+                  <div class="col-6 pt-50">
+                    <ul>
+                      <li class="sidebar-dropdown active">
+                        <a href="javascript:void(0);" class="text-decoration-none d-flex justify-content-between align-items-center text-primary fw-bold border border-1 border-primary rounded-3 mb-4" style="padding: 18px;">
+                          <span>When was the political party established?</span>
+                          <i class="fa-solid fa-angle-down"></i>
+                        </a>
+                        <div class="sidebar-submenu active">
+                          <ul>
+                            <li class="active">
+                                <a href="#" class="text-decoration-none text-secondary">
+                                  <span>Our political party was established on July 15, 2004, marking a significant moment in the realm of political evolution. Born out of a collective vision for transformative governance and social justice, the party emerged as a beacon of change. Grounded in its foundational principles, the political party embarked on a journey to redefine the political landscape.</span>
+                                </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li class="sidebar-dropdown">
+                        <a href="javascript:void(0);" class="text-decoration-none d-flex justify-content-between align-items-center text-primary fw-bold border border-1 border-primary rounded-3 mb-4" style="padding: 18px;">
+                          <span>Has the party achieved any electoral successes?</span>
+                          <i class="fa-solid fa-angle-down"></i>
+                        </a>
+                        <div class="sidebar-submenu">
+                          <ul>
+                            <li>
+                                <a href="#" class="text-decoration-none text-secondary">
+                                  <span>Our political party was established on July 15, 2004, marking a significant moment in the realm of political evolution. Born out of a collective vision for transformative governance and social justice, the party emerged as a beacon of change. Grounded in its foundational principles, the political party embarked on a journey to redefine the political landscape.</span>
+                                </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li class="sidebar-dropdown">
+                        <a href="javascript:void(0);" class="text-decoration-none d-flex justify-content-between align-items-center text-primary fw-bold border border-1 border-primary rounded-3 mb-4" style="padding: 18px;">
+                          <span>Can individuals join the political party?</span>
+                          <i class="fa-solid fa-angle-down"></i>
+                        </a>
+                        <div class="sidebar-submenu">
+                          <ul>
+                            <li>
+                                <a href="#" class="text-decoration-none text-secondary">
+                                  <span>Our political party was established on July 15, 2004, marking a significant moment in the realm of political evolution. Born out of a collective vision for transformative governance and social justice, the party emerged as a beacon of change. Grounded in its foundational principles, the political party embarked on a journey to redefine the political landscape.</span>
+                                </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-6 pt-50">
+                    <ul>
+                      <li class="sidebar-dropdown1 active">
+                        <a href="javascript:void(0);" class="text-decoration-none d-flex justify-content-between align-items-center text-primary fw-bold border border-1 border-primary rounded-3 mb-4" style="padding: 18px;">
+                          <span>How does the party address environmental issues?</span>
+                          <i class="fa-solid fa-angle-down"></i>
+                        </a>
+                        <div class="sidebar-submenu1 active">
+                          <ul>
+                            <li class="active">
+                                <a href="#" class="text-decoration-none text-secondary">
+                                  <span>We recognize the paramount importance of environmental stewardship <br> and have integrated a comprehensive approach to address pressing ecological concerns. This includes advocating for legislation that promotes clean energy initiatives, conservation efforts, and the responsible use of natural <br> resources.</span>
+                                </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li class="sidebar-dropdown1">
+                        <a href="javascript:void(0);" class="text-decoration-none d-flex justify-content-between align-items-center text-primary fw-bold border border-1 border-primary rounded-3 mb-4" style="padding: 18px;">
+                          <span>What role does charity play in the party's values?</span>
+                          <i class="fa-solid fa-angle-down"></i>
+                        </a>
+                        <div class="sidebar-submenu1">
+                          <ul>
+                            <li>
+                                <a href="#" class="text-decoration-none text-secondary">
+                                  <span>We recognize the paramount importance of environmental stewardship <br> and have integrated a comprehensive approach to address pressing ecological concerns. This includes advocating for legislation that promotes clean energy initiatives, conservation efforts, and the responsible use of natural <br> resources.</span>
+                                </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li class="sidebar-dropdown1">
+                        <a href="javascript:void(0);" class="text-decoration-none d-flex justify-content-between align-items-center text-primary fw-bold border border-1 border-primary rounded-3 mb-4" style="padding: 18px;">
+                          <span>How does the party support local charities?</span>
+                          <i class="fa-solid fa-angle-down"></i>
+                        </a>
+                        <div class="sidebar-submenu1">
+                          <ul>
+                            <li>
+                                <a href="#" class="text-decoration-none text-secondary">
+                                  <span>We recognize the paramount importance of environmental stewardship <br> and have integrated a comprehensive approach to address pressing ecological concerns. This includes advocating for legislation that promotes clean energy initiatives, conservation efforts, and the responsible use of natural <br> resources.</span>
+                                </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- blog -->
+            <section class="py-100 bg-light">
+              <div class="container">
+                <div class="row">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
+                      <h6 id="list-item-1" style="font-size: 18px; font-weight: 500; color: #2952CC;">Stay informed</h6>
+                      <h2 class="text-primary display-5 fw-semibold mt-4">Navigating the stories <br> of change in our blog</h2>
+                    </div>
+                    <div>
+                      <button class="btn btn-primary rounded mx-auto" type="submit" style="padding: 17px 0px; width: 213px;" data-aos="zoom-in-up">
+                        <a href="assets/pages/blog.html" class="hover2 text-white text-decoration-none fw-medium"> Read all articles </a>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="pt-50 d-flex m-0 owl-carousel owl-theme">
+                    <div class="card2 col-4 item12 rounded-3 w-100 h-100 overflow-hidden">
+                      <img class="card-img-top rounded-top" src="assets/img/blog/home-political-blog-1-768x512.jpg" style="cursor: pointer;">
+                      <div class="card-body" style="padding: 33px;">
+                        <h3 class="fw-semibold" style="margin-bottom: 10px; font-size: 20px;"> Stories of effective advocacy and activism </h3>
+                        <div class="mb-3"><span><i class="bi bi-calendar"></i><span class="text-primary fw-medium ms-2"> August 21, 2023 </span></span><span class="ms-3"><i class="bi bi-chat-left-dots"></i><span class="text-primary fw-medium ms-2">3</span></span></div>
+                        <p class="card-text text-secondary">Community development empowers local people to take charge of their own <br> initiatives.</p>
+                        <button class="btn btn-primary rounded mx-auto" type="submit" style="padding: 10px 18px;">
+                          <a href="assets/pages/blog.html" class="hover2 text-white text-decoration-none fw-medium"> Read more</a>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="card2 col-4 item12 rounded-3 w-100 h-100 overflow-hidden">
+                      <img class="card-img-top rounded-top" src="assets/img/blog/home-political-blog-2-768x512.jpg" style="cursor: pointer;">
+                      <div class="card-body" style="padding: 33px;">
+                        <h3 class="fw-semibold" style="margin-bottom: 10px; font-size: 20px;"> Case studies in effective local governance </h3>
+                        <div class="mb-3"><span><i class="bi bi-calendar"></i><span class="text-primary fw-medium ms-2"> August 21, 2023 </span></span><span class="ms-3"><i class="bi bi-chat-left-dots"></i><span class="text-primary fw-medium ms-2">3</span></span></div>
+                        <p class="card-text text-secondary">Working together towards common goals strengthens bonds among community <br> members.</p>
+                        <button class="btn btn-primary rounded mx-auto" type="submit" style="padding: 10px 18px;">
+                          <a href="assets/pages/blog.html" class="hover2 text-white text-decoration-none fw-medium"> Read more</a>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="card2 col-4 item12 rounded-3 w-100 h-100 overflow-hidden">
+                      <img class="card-img-top rounded-top" src="assets/img/blog/home-political-blog-3-768x512.jpg" style="cursor: pointer;">
+                      <div class="card-body" style="padding: 33px;">
+                        <h3 class="fw-semibold" style="margin-bottom: 10px; font-size: 20px;"> Insights into policy making and implementation </h3>
+                        <div class="mb-3"><span><i class="bi bi-calendar"></i><span class="text-primary fw-medium ms-2"> August 21, 2023 </span></span><span class="ms-3"><i class="bi bi-chat-left-dots"></i><span class="text-primary fw-medium ms-2">3</span></span></div>
+                        <p class="card-text text-secondary">Socially cohesive communities are better equipped to overcome obstacles and <br> adapt.</p>
+                        <button class="btn btn-primary rounded mx-auto" type="submit" style="padding: 10px 18px;">
+                          <a href="assets/pages/blog.html" class="hover2 text-white text-decoration-none fw-medium"> Read more</a>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="card2 col-4 item12 rounded-3 w-100 h-100 overflow-hidden">
+                      <img class="card-img-top rounded-top" src="assets/img/blog/home-political-donation-3-768x512.jpg" style="cursor: pointer;">
+                      <div class="card-body" style="padding: 33px;">
+                        <h3 class="fw-semibold" style="margin-bottom: 10px; font-size: 20px;"> Importance of voter education and registration drives </h3>
+                        <div class="mb-3"><span><i class="bi bi-calendar"></i><span class="text-primary fw-medium ms-2"> August 21, 2023 </span></span><span class="ms-3"><i class="bi bi-chat-left-dots"></i><span class="text-primary fw-medium ms-2">3</span></span></div>
+                        <p class="card-text text-secondary">It’s essential to recognize the invaluable contribution of community-led <br> approaches.</p>
+                        <button class="btn btn-primary rounded mx-auto" type="submit" style="padding: 10px 18px;">
+                          <a href="assets/pages/blog.html" class="hover2 text-white text-decoration-none fw-medium"> Read more</a>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div> 
+              </div>
+            </section> 
+        </main>
+        <!-- footer -->
+        <footer>
+          <section class="pt-100 bg-dark">
+            <div class="container">
+              <div class="row ">
+                <div class="col-4">
+                  <img src="assets/img/logo/Logo-footer.svg" alt="footer-logo">
+                  <p class="text-footer mt-4 mb-4">You can help us to save lives during a <br> disaster, get clean water running in the <br> most remote areas, and much more.</p>
+                  <ul class="social d-flex gap-2 mt-3">
+                    <li class="media text-center">
+                      <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    </li>
+                    <li class="media text-center">
+                      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </li>
+                    <li class="media text-center">
+                      <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                    </li>
+                    <li class="media text-center">
+                      <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                    </li>
+                    <li class="media text-center">
+                      <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    </li>
+                    <li class="media text-center">
+                      <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-2 footer">
+                  <p class="text-white text-uppercase fw-medium mb-4" style="font-size: 18px;">Features</p>
+                  <ul>
+                    <li><a href="#">Page builder</a></li>
+                    <li><a href="#">Design tools</a></li>
+                    <li><a href="#">Theme options</a></li>
+                    <li><a href="#">Theme builder</a></li>
+                  </ul>
+                </div>
+                <div class="col-2 footer">
+                  <p class="text-white text-uppercase fw-medium mb-4" style="font-size: 18px;">RESOURCES</p>
+                  <ul>
+                    <li><a href="#">Customer support</a></li>
+                    <li><a href="#">Documentation</a></li>
+                    <li><a href="#">Community</a></li>
+                    <li><a href="#">Hosting</a></li>
+                  </ul>
+                </div>
+                <div class="col-4 footer">
+                  <p class="text-white text-uppercase fw-medium mb-4" style="font-size: 18px;">Stay in touch</p>
+                  <form action="" method="">
+                    <div class="d-flex mb-3">
+                      <input type="email" name="email" placeholder="Email" class="border text-footer bg-dark border-secondary px-4 py-3 w-50 rounded-start">
+                      <button class="hover3 btn btn-primary border-1 rounded-0 rounded-end" type="submit" style=" padding: 16px 30px 16px 30px;">
+                          <a href="#" class="text-decoration-none fw-medium">Subscribe</a>
+                      </button>
+                    </div>
+                  </form>
+                  <ul>
+                    <li><a href="#">1-800-CHARITY</a></li>
+                    <li><a href="#">support@amitycharity.org</a></li>
+                  </ul>
+                </div>
+              </div>
+              <hr style="color: #C1C4D6; margin-top: 70px;">
+              <div class="d-flex justify-content-between align-items-center p-4">
+                <p class="text-footer">© Amity WordPress Theme. All rights reserved.</p>
+                <p class="data">Terms & conditions Privacy policy</p>
+              </div>
+            </div>
+          </section>
+        </footer>
+
+        <script src="assets/js/jquery-3.7.1.min.js"></script>
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/owl.carousel.min.js"></script>
+        <script src="assets/js/aos.js"></script>
+        <script>
+          AOS.init();
+        </script>
+        <!-- counter -->
+        <script>
+          var counted = 0;
+          $(window).scroll(function () {
+            var oTop = $(".coun").offset().top - window.innerHeight;
+            if (counted == 0 && $(window).scrollTop() > oTop) {
+              $(".count").each(function () {
+                var $this = $(this),
+                  countTo = $this.attr("data-count");
+                $({
+                  countNum: $this.text()
+                }).animate(
+                  {
+                    countNum: countTo
+                  },
+
+                  {
+                    duration: 2000,
+                    easing: "swing",
+                    step: function () {
+                      $this.text(Math.floor(this.countNum));
+                    },
+                    complete: function () {
+                      $this.text(this.countNum);
+                      //alert('finished');
+                    }
+                  }
+                );
+              });
+              counted = 1;
+            }
+          });
+        </script>
+        <!-- tooltip -->
+        <script>
+          const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+          const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+        </script>
+        <!-- FAQ -->
+        <script>
+          $(".sidebar-dropdown > a").click(function () {
+            $(".sidebar-submenu").slideUp(200);
+            if ($(this).parent().hasClass("active")) {
+              $(".sidebar-dropdown").removeClass("active");
+              $(this).parent().removeClass("active");
+            } else {
+              $(".sidebar-dropdown").removeClass("active");
+              $(this).next(".sidebar-submenu").slideDown(200);
+              $(this).parent().addClass("active");
+            }
+          });
+        </script>
+        <!-- FAQ 2-->
+        <script>
+          $(".sidebar-dropdown1 > a").click(function () {
+            $(".sidebar-submenu1").slideUp(200);
+            if ($(this).parent().hasClass("active")) {
+              $(".sidebar-dropdown1").removeClass("active");
+              $(this).parent().removeClass("active");
+            } else {
+              $(".sidebar-dropdown1").removeClass("active");
+              $(this).next(".sidebar-submenu1").slideDown(200);
+              $(this).parent().addClass("active");
+            }
+          });
+        </script>
+        <!-- carousel -->
+        <script>
+          $(document).ready(function(){
+              $('.owl-carousel').owlCarousel({
+                  loop:true,
+                  margin:15,
+                  nav:true,
+                  responsive:{
+                      0:{
+                          items:1
+                      },
+                      600:{
+                          items:3
+                      },
+                      1000:{
+                          items:3
+                      }
+                  }
+              })
+          });
+        </script>
+        <!-- Scroll back to top -->
+        <script>
+          $(document).ready(function () {
+              "use strict";
+              var progressPath = document.querySelector('.progress-wrap path');
+              var pathLength = progressPath.getTotalLength();
+              progressPath.style.transition = progressPath.style.WebkitTransition = 'none';
+              progressPath.style.strokeDasharray = pathLength + ' ' + pathLength;
+              progressPath.style.strokeDashoffset = pathLength;
+              progressPath.getBoundingClientRect();
+              progressPath.style.transition = progressPath.style.WebkitTransition = 'stroke-dashoffset 10ms linear';
+              var updateProgress = function () {
+                  var scroll = $(window).scrollTop();
+                  var height = $(document).height() - $(window).height();
+                  var progress = pathLength - (scroll * pathLength / height);
+                  progressPath.style.strokeDashoffset = progress;
+              }
+              updateProgress();
+              $(window).scroll(updateProgress);
+              var offset = 50;
+              var duration = 550;
+              jQuery(window).on('scroll', function () {
+                  if (jQuery(this).scrollTop() > offset) {
+                      jQuery('.progress-wrap').addClass('active-progress');
+                  } else {
+                      jQuery('.progress-wrap').removeClass('active-progress');
+                  }
+              });
+              jQuery('.progress-wrap').on('click', function (event) {
+                  event.preventDefault();
+                  jQuery('html, body').animate({ scrollTop: 0 }, duration);
+                  return false;
+              })
+          });
+        </script>
+        <!-- fixed-header -->
+        <script>
+          $(window).scroll(function () {
+             if ($(window).scrollTop() > 300) {
+                 $(".head").addClass("fixed-header");
+             }
+             else {
+                 $(".head").removeClass("fixed-header");
+             }
+          });
+        </script>
+        <!-- loader -->
+        <script>
+          $(window).on('load', function () {
+              $(".wrapper .loader").delay(700).fadeOut(1300);
+              $(".wrapper").delay(1700).fadeOut(2300);
+
+              setTimeout(function () {
+                  $("body").removeClass("hidden");
+              }, 2400);
+          });
+        </script>
+        <!-- pointer -->
+        <script>
+          const cursor = document.querySelector("#cursor");
+           const cursorBorder = document.querySelector("#cursor-border");
+           const cursorPos = { x: 0, y: 0 };
+           const cursorBorderPos = { x: 0, y: 0 };
+   
+           document.addEventListener("mousemove", (e) => {
+           cursorPos.x = e.clientX;
+           cursorPos.y = e.clientY;
+   
+           cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+           });
+   
+           requestAnimationFrame(function loop() {
+           const easting = 8;
+           cursorBorderPos.x += (cursorPos.x - cursorBorderPos.x) / easting;
+           cursorBorderPos.y += (cursorPos.y - cursorBorderPos.y) / easting;
+   
+           cursorBorder.style.transform = `translate(${cursorBorderPos.x}px, ${cursorBorderPos.y}px)`;
+           requestAnimationFrame(loop);
+           });
+   
+           document.querySelectorAll("[data-cursor]").forEach((item) => {
+           item.addEventListener("mouseover", (e) => {
+               if (item.dataset.cursor === "pointer") {
+               cursorBorder.style.backgroundColor = "rgba(255, 255, 255, .6)";
+               cursorBorder.style.setProperty("--size", "30px");
+               }
+               if (item.dataset.cursor === "pointer2") {
+               cursorBorder.style.backgroundColor = "white";
+               cursorBorder.style.mixBlendMode = "difference";
+               cursorBorder.style.setProperty("--size", "80px");
+               }
+           });
+           item.addEventListener("mouseout", (e) => {
+               cursorBorder.style.backgroundColor = "unset";
+               cursorBorder.style.mixBlendMode = "unset";
+               cursorBorder.style.setProperty("--size", "50px");
+           });
+           });
+   
+        </script>
+    </body>
+</html>
